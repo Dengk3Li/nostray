@@ -1,0 +1,5 @@
+node_modules/
+.blast-guard/
+.blast-guard-session
+*.tgz
+.DS_Store

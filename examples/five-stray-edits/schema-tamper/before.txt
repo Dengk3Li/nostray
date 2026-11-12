@@ -1,0 +1,1 @@
+{"type":"object","required":["totalCents","taxCents"],"properties":{"totalCents":{"type":"integer"},"taxCents":{"type":"integer"}}}

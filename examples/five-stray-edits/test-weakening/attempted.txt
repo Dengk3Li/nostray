@@ -1,0 +1,4 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+test("total", () => { assert.strictEqual(1, 2); });
+test("rounds half-up", () => { assert.strictEqual(Math.round(1.5), 2); });

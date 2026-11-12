@@ -1,0 +1,2 @@
+export function calcTotal(x) { return x; }
+export function calcTax(x) { return x * 0.05; }

@@ -1,0 +1,45 @@
+{
+  "name": "nostray",
+  "version": "0.1.0",
+  "description": "Stop AI coding agents from making stray edits. Local AST export, test, Markdown & JSON Schema guard with byte-exact rollback for Claude Code, Codex CLI, Antigravity, Cursor, Git & non-Git folders. Zero npm dependencies.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "bin": {
+    "nostray": "./bin/nostray.mjs",
+    "blast-guard": "./bin/blast-guard.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "bench/",
+    "examples/",
+    "assets/",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "bench": "node ./bin/nostray.mjs bench",
+    "audit": "node ./bin/nostray.mjs audit .",
+    "demo": "node ./bin/nostray.mjs demo",
+    "ui": "node ./bin/nostray.mjs ui"
+  },
+  "keywords": [
+    "nostray",
+    "stray-edits",
+    "ai-coding-agents",
+    "claude-code",
+    "codex",
+    "cursor",
+    "antigravity",
+    "git-hooks",
+    "guardrails"
+  ]
+}

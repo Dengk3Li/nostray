@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="254" viewBox="0 0 1040 254" role="img" aria-label="NoStray 4-stage local deterministic enforcement pipeline">
+  <style>
+    .box { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1.3; }
+    .h { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13.5px; font-weight: 700; fill: #0f172a; }
+    .b { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 12px; fill: #334155; }
+    .m { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; fill: #0369a1; }
+    .cap { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 11.5px; fill: #64748b; }
+  </style>
+  <rect width="1040" height="254" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.3"/>
+  <text x="24" y="32" class="h" font-size="14.5">How NoStray Guards an Agent Session Locally (Node.js &gt;= 22.13 Built-ins · Zero Cloud Calls)</text>
+
+  <!-- Stage 1 -->
+  <rect x="24" y="52" width="228" height="150" rx="8" class="box"/>
+  <rect x="24" y="52" width="228" height="6" rx="3" fill="#0284c7"/>
+  <text x="38" y="78" class="h">1. Prompt &amp; Baseline</text>
+  <text x="38" y="98" class="m">UserPromptSubmit</text>
+  <text x="38" y="120" class="b">• Captures SHA-256 baseline</text>
+  <text x="38" y="139" class="b">• Extracts scoped user grants</text>
+  <text x="38" y="158" class="b">• Strips negations &amp; quotes</text>
+  <text x="38" y="177" class="b">  (&quot;don't touch schema.json&quot;)</text>
+
+  <!-- Arrow 1 -->
+  <line x1="252" y1="127" x2="276" y2="127" stroke="#64748b" stroke-width="1.6"/>
+  <polygon points="276,127 269,123 269,131" fill="#64748b"/>
+
+  <!-- Stage 2 -->
+  <rect x="278" y="52" width="234" height="150" rx="8" class="box"/>
+  <rect x="278" y="52" width="234" height="6" rx="3" fill="#16a34a"/>
+  <text x="292" y="78" class="h">2. Structural Pre-Check</text>
+  <text x="292" y="98" class="m">PreToolUse (~6 ms warm)</text>
+  <text x="292" y="120" class="b">• JS/TS/Py public export lock</text>
+  <text x="292" y="139" class="b">• Append-only test suite lock</text>
+  <text x="292" y="158" class="b">• RFC 8259 JSON Schema lock</text>
+  <text x="292" y="177" class="b">• Markdown numbers &amp; qualifiers</text>
+
+  <!-- Arrow 2 -->
+  <line x1="512" y1="127" x2="536" y2="127" stroke="#64748b" stroke-width="1.6"/>
+  <polygon points="536,127 529,123 529,131" fill="#64748b"/>
+
+  <!-- Stage 3 -->
+  <rect x="538" y="52" width="228" height="150" rx="8" class="box"/>
+  <rect x="538" y="52" width="228" height="6" rx="3" fill="#d97706"/>
+  <text x="552" y="78" class="h">3. Shell &amp; Crash Recovery</text>
+  <text x="552" y="98" class="m">node:sqlite WAL + Seatbelt</text>
+  <text x="552" y="120" class="b">• Allows 'pytest' / 'node --test'</text>
+  <text x="552" y="139" class="b">• Restores rogue shell deletes</text>
+  <text x="552" y="158" class="b">• Preserves dirty user edits</text>
+  <text x="552" y="177" class="b">• Works without Git</text>
+
+  <!-- Arrow 3 -->
+  <line x1="766" y1="127" x2="790" y2="127" stroke="#64748b" stroke-width="1.6"/>
+  <polygon points="790,127 783,123 783,131" fill="#64748b"/>
+
+  <!-- Stage 4 -->
+  <rect x="792" y="52" width="224" height="150" rx="8" class="box"/>
+  <rect x="792" y="52" width="224" height="6" rx="3" fill="#4f46e5"/>
+  <text x="806" y="78" class="h">4. Stop Verification</text>
+  <text x="806" y="98" class="m">Stop + 'nostray ui'</text>
+  <text x="806" y="120" class="b">• Optional '--acceptance'</text>
+  <text x="806" y="139" class="b">  isolated sandbox test run</text>
+  <text x="806" y="158" class="b">• Visual timeline &amp; diffs</text>
+  <text x="806" y="177" class="b">• Privacy-safe SVG badge</text>
+
+  <text x="24" y="230" class="cap">Important host note: Editor hook protocols execute locally; if a hook crashes or exceeds host timeout, hosts such as Codex CLI may continue tool execution.</text>
+</svg>
